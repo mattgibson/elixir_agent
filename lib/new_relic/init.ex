@@ -44,7 +44,7 @@ defmodule NewRelic.Init do
     })
   end
 
-  @region_matcher ~r/^(?<prefix>.+?)x/
+  @region_matcher ~r/^(?<prefix>.+?)\d*x/
   def determine_region(nil), do: nil
 
   def determine_region(license_key) do
